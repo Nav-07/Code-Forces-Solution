@@ -1,0 +1,22 @@
+#include <string>
+#include <iostream>
+using namespace std;
+
+int main() {
+	string s; cin >> s;
+	int j, cnt; string toFind = "hello";
+	j = 0; cnt = 0;
+	for (int i = 0; i < s.size(); i++) {
+		if (s[i] == toFind[j]) {
+			j++;
+			cnt++;
+		}
+		if (cnt == 5)
+			break;
+	}
+	if (cnt == 5)
+		cout << "YES" << endl;
+	else
+		cout << "NO" << endl;
+	return 0;
+}
